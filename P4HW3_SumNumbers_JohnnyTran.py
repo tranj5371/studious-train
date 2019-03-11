@@ -6,17 +6,15 @@
 # Displays the purpose of the program
 print("This program adds a series of positive numbers that you enter. ")
 
-# Ask the user to input positive or negative number 
-PositiveNumber = int(input("Enter a positive number or negative number to end the series: "))
-
-# Defines the accumulator and sets it as 0 
+# Defines the accumulator and number and sets them as 0 
 Total = 0
+Number = 0
 
 # Using while loop and if statement to add the positive numbers together
-if PositiveNumber > 0:
-    for number in range (1, PositiveNumber+1):
-        PositiveNumber = int(input("Enter a positive number or negative number to end the series: "))
-        Total = Total + PositiveNumber
-elif PositiveNumber < 0:   
-    print(Total)
+while Number >= 0:
+    Number = float(input("Enter a positive number to add or a negative number to end the series: "))
+    Total += Number
+    if Number < 0:
+        Total -= Number
+        print ("Your total is,", Total)
 
